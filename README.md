@@ -71,16 +71,17 @@ Predictions ranked → find_precision evaluates top-5 candidate recovery
 
 Standard regression metrics like RMSE don't reflect the actual goal. The real question is whether the model correctly identifies *who* the MVP candidates are in the right order. `find_precision` addresses this by iterating through predicted rankings, checking hits against the true top-5 by vote share, and averaging cumulative precision across all hits — aggregated into a mean precision score across all backtested seasons.
 
+**The final model achieves ~73–75% precision**, meaning it correctly identifies roughly 3–4 out of the true top-5 MVP candidates in the right ranked order across historical seasons.
+
 ---
 
 ## Project Structure
 
 ```
 nba-mvp-predictor/
-├── data/
-│   ├── MVPs/                        # Raw scraped MVP voting HTML
-│   ├── Teams/                       # Raw scraped team stats HTML
-│   └── PlayerStats/                 # Raw scraped player stats HTML
+├── MVPs/                            # Raw scraped MVP voting HTML
+├── Teams/                           # Raw scraped team stats HTML
+├── PlayerStats/                     # Raw scraped player stats HTML
 ├── NBA_Web_Scraping.ipynb
 ├── NBA_Cleaning&Preprocessing.ipynb
 ├── NBA_MVP_ML_Final.ipynb
