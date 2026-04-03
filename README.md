@@ -74,16 +74,3 @@ Standard regression metrics like RMSE don't reflect the actual goal. The real qu
 **The final model achieves ~73–75% precision**, meaning it correctly identifies roughly 3–4 out of the true top-5 MVP candidates in the right ranked order across historical seasons.
 
 ---
-
-## Project Structure
-
-```
-nba-mvp-predictor/
-├── MVPs/                            # Raw scraped MVP voting HTML
-├── Teams/                           # Raw scraped team stats HTML
-├── PlayerStats/                     # Raw scraped player stats HTML
-├── NBA_Web_Scraping.ipynb
-├── NBA_Cleaning&Preprocessing.ipynb
-├── NBA_MVP_ML_Final.ipynb
-└── README.md
-```
